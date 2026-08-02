@@ -1,0 +1,115 @@
+generated: '2026-08-01'
+method: probed
+source: live HTTPS probes of every iCapital host resolved from apis.yml
+summary:
+  hosts_probed: 3
+  documents_found: 0
+  note: >-
+    No /.well-known/ discovery document is published on any reachable iCapital
+    host. Every path below returned HTTP 404 with an HTML body (the WordPress /
+    HubSpot CMS 404 page), so there is no security.txt, no OIDC/OAuth discovery
+    metadata, no api-catalog, no ai-plugin and no A2A agent card. Absence is the
+    recorded result, not a gap in the probe. No raw file was saved because no
+    probe returned 200. No `WellKnown` or `SecurityTxt` pointer is wired in
+    apis.yml — there is nothing to point at.
+hosts:
+- host: https://icapital.com
+  role: corporate website (WordPress)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: present, but a robots file is not a discovery document; not saved
+- host: https://marketplace.icapital.com
+  role: iCapital Marketplace (HubSpot CMS)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+- host: https://icapitalnetwork.com
+  role: legacy domain (301 redirects to icapital.com)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+hosts_not_resolving:
+- api.icapital.com
+- apis.icapital.com
+- developer.icapital.com
+- developers.icapital.com
+- docs.icapital.com
+- dlt.icapital.com
+- platform.icapital.com
+- portal.icapital.com
+- login.icapital.com
+- app.icapital.com
+- auth.icapital.com
+- sso.icapital.com
+- id.icapital.com
+- my.icapital.com
+- trust.icapital.com
+- security.icapital.com
+- partner.icapital.com
+- partners.icapital.com
+hosts_resolving_but_unserved:
+- host: status.icapital.com
+  note: >-
+    Resolves via the wildcard HubSpot CNAME (5228948.group48.sites.hubspot.net)
+    but returns HTTP 403 / Cloudflare error 1034 — no origin is configured. This
+    is NOT a status page; do not wire a StatusPage pointer from it.
+- host: architect.icapital.com
+  note: wildcard HubSpot CNAME that 301s to https://icapital.com/architect/
+x-evidence:
+  fetched: '2026-08-01'
+  method: curl HTTPS GET, following redirects, 12s timeout

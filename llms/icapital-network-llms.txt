@@ -1,0 +1,79 @@
+# iCapital Network
+
+> iCapital (Institutional Capital Network, Inc.), founded 2013 and headquartered in New York, operates the alternative investments marketplace and the operating infrastructure behind it — private markets funds, hedge funds, structured investments, annuities, model portfolios and separately managed accounts — for wealth managers, RIAs, family offices, institutional investors and the asset managers who distribute through them. iCapital Marketplace advertises access to funds from 700+ asset managers and reports $945B+ in global platform assets.
+
+> IMPORTANT FOR AGENTS: as of 2026-08-01 iCapital publishes **no public API**. There is no developer portal, no API reference, no OpenAPI/AsyncAPI/GraphQL contract, no MCP server, no A2A agent card, no public SDKs and no sandbox. API documentation is described by iCapital as available to integration partners through its sales and technical-support organization, not on the open web. Do not attempt to construct API calls against iCapital; there is no documented public endpoint. Integration is a commercial conversation via https://icapital.com/contact-us/.
+
+## Products
+
+- [iCapital Marketplace](https://marketplace.icapital.com/): the alternative investments marketplace for wealth managers and asset managers.
+- [Private Markets](https://icapital.com/private-markets/): private equity, private credit, real assets and secondaries access.
+- [Hedge Funds](https://icapital.com/hedge-funds/): hedge fund access and servicing.
+- [Structured Investments](https://icapital.com/structured-investments/): structured products lifecycle platform.
+- [Annuities](https://icapital.com/annuities/): annuities platform.
+- [Model Portfolios](https://icapital.com/model-portfolios/): outcome-based alternatives model portfolios.
+- [Separately Managed Accounts](https://icapital.com/separately-managed-accounts/): SMA access.
+- [Architect](https://icapital.com/architect/): portfolio construction and analytics.
+- [Data Solutions](https://icapital.com/data-solutions/): alternative data management and consolidated reporting.
+- [Alternative Data Management](https://icapital.com/data-solutions/alternative-data-management/): document extraction and downstream data delivery.
+- [Consolidated Reporting](https://icapital.com/data-solutions/consolidated-reporting/): asset reporting services.
+- [Identity Solutions](https://icapital.com/identity-solutions/): KYC/AML and financial identity.
+- [iCapital DLT](https://icapital.com/distributed-ledger-technology/): described by iCapital as an "API-first distributed ledger technology platform" built on the Canton Network. This is the only place iCapital publicly claims an API surface; the documentation is not public.
+- [Custom Platform Solution](https://icapital.com/custom-platform-solution/): white-label platform delivery.
+- [Investment Reporting](https://icapital.com/investment-reporting/): reporting services.
+- [Research & Due Diligence](https://icapital.com/research-due-diligence/): fund research and diligence.
+
+## Integration
+
+- [Integration Partners](https://icapital.com/who-we-serve/integration-partners/): custodians (BNY, Fidelity), platform partners (BNY, Envestnet, GeoWealth, Morningstar, Orion Advisor, TradePMR, Vestmark), administrators and transfer agents (BNY, Ultimus, UMB). Integration is delivered as SSO into advisor workstations, embedded fund/model investing inside portfolio-management and UMA platforms, and partner data integrations — not as a self-serve public API.
+- [Partners](https://icapital.com/about-us/partners/): the broader partner ecosystem.
+- [GitHub organization](https://github.com/icapitalnetwork): 5 public repositories, all internal tooling or forks of open-source Ruby/JavaScript libraries. No client SDK and no API specification is published there.
+
+## Who they serve
+
+- [Wealth Managers](https://icapital.com/who-we-serve/wealth-managers/)
+- [Asset Managers](https://icapital.com/who-we-serve/asset-managers/)
+- [Families & Family Offices](https://icapital.com/who-we-serve/families-family-offices/)
+- [Institutional Investors](https://icapital.com/who-we-serve/institutional-investors/)
+- [RIAs](https://icapital.com/ria/)
+
+## Company
+
+- [About](https://icapital.com/about-us/)
+- [Team](https://icapital.com/about-us/team/)
+- [Locations](https://icapital.com/locations/)
+- [Careers](https://icapital.com/careers/)
+- [Contact](https://icapital.com/contact-us/)
+
+## Content
+
+- [Insights](https://icapital.com/insights/) — [RSS](https://icapital.com/insights/feed/)
+- [Newsroom](https://icapital.com/newsroom/) — [RSS](https://icapital.com/newsroom/feed/)
+- [Podcasts](https://icapital.com/podcasts/)
+- [Case Studies](https://icapital.com/case-studies/)
+- [Events](https://icapital.com/events/)
+- [Document Center](https://icapital.com/document-center/)
+
+## Legal, regulatory and security
+
+- [Terms of Service](https://icapital.com/terms-of-service/)
+- [Terms of Use — Platform](https://icapital.com/terms-of-use-platform/)
+- [Privacy Policy](https://icapital.com/privacy-policy/)
+- [Cookie Policy](https://icapital.com/cookie-policy/)
+- [GLBA Notice](https://icapital.com/glba-notice/)
+- [Business Continuity Statement](https://icapital.com/business-continuity-statement/)
+- [Accessibility Statement](https://icapital.com/accessibility-statement/)
+- [FINRA BrokerCheck — iCapital Markets LLC (CRD 118219)](https://brokercheck.finra.org/firm/summary/118219)
+- No /.well-known/security.txt and no published vulnerability-disclosure program or trust center were found (2026-08-01).
+
+## API Evangelist artifacts in this repo
+
+- `security/icapital-network-domain-security.yml` — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for icapital.com.
+- `well-known/icapital-network-well-known.yml` — full record of the /.well-known/ probe sweep (zero documents found).
+- `conformance/icapital-network-conformance.yml` — standards and regulatory posture, with the negative contract-discovery result recorded.
+- `llms/icapital-network-llms.txt` — this file.
+
+---
+generated: '2026-08-01'
+method: generated
+source: apis.yml + https://icapital.com/ sitemap and product pages

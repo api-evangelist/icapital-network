@@ -1,0 +1,23 @@
+generated: '2026-08-01'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: icapital.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 13 09:29:51 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: icapital.com
+  dnssec: false
+  caa:
+  - 0 issuewild "digicert.com; cansignhttpexchanges=yes"
+  - 0 issuewild "letsencrypt.org"
+  - 0 issuewild "pki.goog; cansignhttpexchanges=yes"
+  - 0 issuewild "ssl.com"
+  - 0 iodef "mailto:caa@icapital.com"
+  - 0 issue "amazon.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

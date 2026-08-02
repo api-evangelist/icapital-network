@@ -1,17 +1,45 @@
 aid: icapital-network
 name: iCapital Network
-description: 'iCapital Network is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'iCapital (Institutional Capital Network, Inc.) is a New York-headquartered
+  financial technology company, founded in 2013, that operates the alternative investments
+  marketplace and the operating infrastructure behind it. Its platform lets wealth
+  managers, RIAs, family offices and institutional investors research, subscribe to,
+  service and report on private markets funds, hedge funds, structured investments,
+  annuities, model portfolios and separately managed accounts, while asset managers
+  use it to distribute those products into the wealth channel. iCapital Marketplace
+  advertises access to funds from 700+ asset managers and reports $945B+ in global
+  platform assets. Around the marketplace sit Architect (portfolio construction and
+  analytics), Data Solutions (alternative data management and consolidated reporting),
+  Identity Solutions (KYC/AML), and iCapital DLT, an API-first distributed ledger
+  platform built on the Canton Network. Integration with custodians, fund administrators,
+  transfer agents and advisor platforms (BNY, Fidelity, Envestnet, Orion, Morningstar,
+  Vestmark, TradePMR, GeoWealth, Ultimus, UMB) happens through SSO, embedded workflows
+  and partner data integrations. As of the 2026-08-01 enrichment pass iCapital publishes
+  no public developer portal, API reference, machine-readable API contract or client
+  SDKs; API documentation is described as available to integration partners only,
+  through the sales and technical-support organization.'
 url: https://raw.githubusercontent.com/api-evangelist/icapital-network/refs/heads/main/apis.yml
+image: https://marketplace.icapital.com/hs-fs/hubfs/iCapital%20Theme%202026/logos/icapital-marketplace-2026.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-2026-08-01
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Financial Services
+- Alternative Investments
+- Private Markets
+- Wealth Management
+- Investment Management
+- Asset Management
+- Fintech
+- Structured Investments
+- Annuities
+- Distributed Ledger Technology
+- Data Management
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +47,48 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/icapital-network-domain-security.yml
+- type: Conformance
+  url: conformance/icapital-network-conformance.yml
+- type: LLMsTxt
+  url: llms/icapital-network-llms.txt
 - type: Website
+  url: https://icapital.com/
+- type: Blog
+  url: https://icapital.com/insights/
+- type: BlogRSS
+  url: https://icapital.com/insights/feed/
+- type: Newsroom
+  url: https://icapital.com/newsroom/
+- type: Support
+  url: https://icapital.com/contact-us/
+- type: GitHubOrganization
+  url: https://github.com/icapitalnetwork
+- type: TermsOfService
+  url: https://icapital.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://icapital.com/privacy-policy/
+- type: CookiePolicy
+  url: https://icapital.com/cookie-policy/
+- type: Marketplace
+  url: https://marketplace.icapital.com/
+- type: Careers
+  url: https://icapital.com/careers/
+- type: Podcast
+  url: https://icapital.com/podcasts/
+- type: Partners
+  url: https://icapital.com/about-us/partners/
+- type: Integrations
+  url: https://icapital.com/who-we-serve/integration-partners/
+- type: SecondaryMarketListing
+  name: Forge Global secondary-market listing
   url: https://forgeglobal.com/icapital-network_stock/
+- type: RegulatoryRegistration
+  name: FINRA BrokerCheck — iCapital Markets LLC (CRD 118219)
+  url: https://brokercheck.finra.org/firm/summary/118219
+x-enrichment:
+  date: '2026-08-01'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1

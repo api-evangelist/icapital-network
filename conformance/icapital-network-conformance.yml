@@ -1,0 +1,76 @@
+generated: '2026-08-01'
+method: searched
+source: https://icapital.com/ (public site, sitemap, marketplace footer)
+scope: >-
+  iCapital publishes no public machine-readable API contract, so no standard
+  below could be asserted from an OpenAPI/AsyncAPI/GraphQL document. Every
+  entry is either an explicit public claim on iCapital's own pages or an
+  honestly-recorded "unknown / not publicly evidenced". Nothing here is
+  inferred from a spec, because there is no spec to infer from.
+standards:
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document found. Probed /openapi.json, /openapi.yaml,
+    /swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc against
+    icapital.com, marketplace.icapital.com and icapitalnetwork.com — all 404.
+    api.icapital.com, apis.icapital.com, developer.icapital.com,
+    developers.icapital.com and docs.icapital.com do not resolve in DNS.
+- id: graphql
+  conforms: false
+  evidence: No /graphql surface found on any resolving host.
+- id: asyncapi
+  conforms: false
+  evidence: No AsyncAPI document and no public webhook/event catalog published.
+- id: mcp
+  conforms: false
+  evidence: No hosted or published Model Context Protocol server found.
+- id: a2a
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json both 404 on every
+    resolving host.
+- id: oauth2
+  conforms: unknown
+  evidence: >-
+    Partner integrations are described as SSO-based, which implies a federated
+    identity flow, but no OAuth 2.0 authorization-server metadata, no
+    /.well-known/oauth-authorization-server and no public auth documentation
+    are published.
+- id: oidc
+  conforms: unknown
+  evidence: /.well-known/openid-configuration returns 404 on all probed hosts.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on all probed hosts.
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: No public error reference or API contract to evaluate.
+- id: rfc8594-sunset-header
+  conforms: unknown
+  evidence: No public deprecation or versioning policy published.
+regulatory:
+- id: finra-broker-dealer
+  registered: true
+  entity: iCapital Markets LLC
+  crd: '118219'
+  evidence: https://brokercheck.finra.org/firm/summary/118219
+  source: iCapital Marketplace site footer
+- id: glba-privacy-notice
+  published: true
+  evidence: https://icapital.com/glba-notice/
+- id: business-continuity
+  published: true
+  evidence: https://icapital.com/business-continuity-statement/
+- id: accessibility-statement
+  published: true
+  evidence: https://icapital.com/accessibility-statement/
+certifications:
+  found: []
+  note: >-
+    No trust center and no named certification (SOC 2, ISO 27001, PCI DSS,
+    HIPAA, FedRAMP, CSA STAR) is published on any reachable iCapital host.
+    trust.icapital.com and security.icapital.com do not resolve. Because no
+    compliance program is publicly evidenced, NO `Compliance` or `TrustCenter`
+    pointer is wired in apis.yml — emitting one would assert a posture iCapital
+    has not published.
