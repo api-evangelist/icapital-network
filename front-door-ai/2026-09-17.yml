@@ -1,0 +1,27 @@
+# Front Door AI Index — icapital-network — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: icapital-network
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: icapital.com
+  final_host: icapital.com
+  ownership: own
+  owner: icapital-network
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 3
+  host_score: 3
+  density: 1.26
+  words: 2381
+  tiers:
+    agentic: 0
+    core: 2
+    model: 1
+  ambiguous: 1
+  top_terms:
+    AI: 2
+    Claude: 1
+    intelligence: 1
