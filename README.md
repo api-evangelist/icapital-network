@@ -64,53 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-iCapital (Institutional Capital Network, Inc.), founded 2013 and headquartered in New York, operates
-the alternative investments marketplace and the operating infrastructure behind it — private markets
-funds, hedge funds, structured investments, annuities, model portfolios and separately managed
-accounts — for wealth managers, RIAs, family offices, institutional investors, and the asset managers
-who distribute through them. iCapital Marketplace advertises access to funds from 700+ asset managers
-and reports $945B+ in global platform assets.
+iCapital (Institutional Capital Network, Inc.) is a New York-headquartered financial technology company, founded in 2013, that operates the alternative investments marketplace and the operating infrastructure behind it. Its platform lets wealth managers, RIAs, family offices and institutional investors research, subscribe to, service and report on private markets funds, hedge funds, structured investments, annuities, model portfolios and separately managed accounts, while asset managers use it to distribute those products into the wealth channel. iCapital Marketplace advertises access to funds from 700+ asset managers and reports $945B+ in global platform assets. Around the marketplace sit Architect (portfolio construction and analytics), Data Solutions (alternative data management and consolidated reporting), Identity Solutions (KYC/AML), and iCapital DLT, an API-first distributed ledger platform built on the Canton Network. Integration with custodians, fund administrators, transfer agents and advisor platforms (BNY, Fidelity, Envestnet, Orion, Morningstar, Vestmark, TradePMR, GeoWealth, Ultimus, UMB) happens through SSO, embedded workflows and partner data integrations. As of the 2026-08-01 enrichment pass iCapital publishes no public developer portal, API reference, machine-readable API contract or client SDKs; API documentation is described as available to integration partners only, through the sales and technical-support organization.
 
-- Website: https://icapital.com/
-- Marketplace: https://marketplace.icapital.com/
-- GitHub: https://github.com/icapitalnetwork
-- Forge Global secondary-market listing: https://forgeglobal.com/icapital-network_stock/
+**Areas:** Company · Financial Services · Alternative Investments · Private Markets · Wealth Management · Investment Management · Asset Management · Fintech · Structured Investments · Annuities · Distributed Ledger Technology · Data Management
 
-## API surface — none published (verified 2026-08-01)
+## iCapital Network on APIs.io
 
-iCapital publishes **no public API**. The enrichment pass ran the full contract-discovery sweep and
-every probe missed:
+Everything profiled for iCapital Network is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/icapital-network/](https://apis.io/providers/icapital-network/)** — or go straight to one of the APIs or properties below.
 
-- No developer portal, API reference, quickstart or docs host. `developer.`, `developers.`, `docs.`,
-  `api.`, `apis.`, `dlt.`, `platform.`, `portal.` and `partners.icapital.com` do **not resolve in DNS**.
-- No OpenAPI/Swagger: `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`,
-  `/api-docs`, `/docs`, `/redoc` all 404 on `icapital.com`, `marketplace.icapital.com` and
-  `icapitalnetwork.com`.
-- No GraphQL surface, no AsyncAPI, no webhook catalog, no MCP server, no A2A agent card.
-- No `/.well-known/` document of any kind (see `well-known/`), so no `security.txt`, no OIDC/OAuth
-  discovery metadata, no api-catalog.
-- No first-party SDKs: nothing on npm, PyPI or in the GitHub org, which holds 5 repos of internal
-  tooling and open-source forks.
-- No status page. `status.icapital.com` resolves only via a wildcard HubSpot CNAME and returns a
-  Cloudflare 1034 error — it is not a status page.
+### Published properties
 
-iCapital does describe **iCapital DLT** as "an API-first distributed ledger technology platform"
-(built on the Canton Network) and states that "iCapital offers comprehensive API documentation and
-technical support from our team of experts to assist with the integration process." That documentation
-is not published on the open web — it is delivered to integration partners under a commercial
-relationship. Partner integration is otherwise described as SSO into advisor workstations plus embedded
-fund/model investing inside portfolio-management and UMA platforms.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts in this repo
+#### Security (1)
 
-| Path | Type | Method |
-|---|---|---|
-| `apis.yml` | APIs.json 0.20 index | identity |
-| `conformance/icapital-network-conformance.yml` | Conformance | searched |
-| `llms/icapital-network-llms.txt` | LLMsTxt | generated |
-| `security/icapital-network-domain-security.yml` | DomainSecurity | probed |
-| `well-known/icapital-network-well-known.yml` | probe record (no pointer — zero documents found) | probed |
+Authentication, trust centre, and vulnerability disclosure.
 
-No `Compliance`, `TrustCenter`, `Security`, `VulnerabilityDisclosure` or `WellKnown` pointer is wired,
-because none of those things is publicly evidenced. Re-run the pipeline if iCapital ever opens a
-developer portal for DLT.
+- [Icapital Network Domain Security](https://apis.io/security/icapital-network/icapital-network-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://icapital.com/)
+- [Support](https://icapital.com/contact-us/)
+- [Blog](https://icapital.com/insights/)
+- [Terms of service](https://icapital.com/terms-of-service/)
+- [Privacy policy](https://icapital.com/privacy-policy/)
+- [GitHub](https://github.com/icapitalnetwork)
+
+## API Evangelist rating
+
+**Kin Score 12.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/icapital-network/](https://apis.io/providers/icapital-network/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for iCapital Network: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/icapital-network/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
